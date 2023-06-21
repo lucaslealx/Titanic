@@ -15,11 +15,11 @@ Repositório criado para a **[competição do Kaggle sobre o desastre do Titanic
 - Utilizamos os mesmos modelos vistos anteriormente
 - O **score público retornado pelo Kaggle foi: 0,76555**
 
-## [Etapa 3: Entendendo mais profundamente o negócio e melhorando os tratamentos dos dados](https://github.com/lucaslealx/Titanic/blob/main/Parte3.ipynb)
+## [Etapa 3: Se aprofundando no negócio e melhorando os tratamentos dos dados](https://github.com/lucaslealx/Titanic/blob/main/Parte3.ipynb)
 - Na terceira etapa o grande objetivo era **entender melhor os dados** para **fazer um melhor tratamento** e tentar melhorar o resultado obtido anteriormente.
 - Então fizemos:
   - O **ajuste na escala dos dados para as colunas Age e Fare**
   - Entendemos melhor as colunas **SibSp** (nº de irmãos/cônjuges a bordo do Titanic) e **Parch** (nº de pais/filhos a bordo do Titanic) e criamos **2 novas colunas: total de familiares a bordo do navio e se o passageiro estava sozinho ou não**
   - Para finalizar, analisamos a **correlação de todas as variáveis** para selecionar aquelas que mais faziam sentido para o modelo
 - Utilizamos os mesmos modelos vistos anteriormente
-- O **score público retornado pelo Kaggle foi: 0,76555**
+- O **score público retornado pelo Kaggle foi: 0,77033**
