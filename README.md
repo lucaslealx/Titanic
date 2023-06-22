@@ -1,6 +1,9 @@
 # Titanic
 Repositório criado para a **[competição do Kaggle sobre o desastre do Titanic](https://www.kaggle.com/competitions/titanic/overview)**
 
+O histórico dos resultados é mostrado abaixo e pode ser obtido no Kaggle:
+<img src="https://github.com/lucaslealx/Titanic/blob/main/img/img_resultados.png" />
+
 ## [Etapa 1: Primeiro modelo](https://github.com/lucaslealx/Titanic/blob/main/Parte1.ipynb)
 - Nesse etapa fizemos apenas o básico para conseguir verificar qual seria o resultado sem fazer nenhum tratamento nem engenharia dos dados
   - Foi visualizado um resumo da base utilizando o **[ydata-profiling](https://github.com/ydataai/ydata-profiling), biblioteca capaz de gerar com poucas linhas toda a descrição do nosso dataset**
@@ -15,7 +18,7 @@ Repositório criado para a **[competição do Kaggle sobre o desastre do Titanic
 - Utilizamos os mesmos modelos vistos anteriormente
 - O **score público retornado pelo Kaggle foi: 0,76555**
 
-## [Etapa 3: Se aprofundando no negócio e melhorando os tratamentos dos dados](https://github.com/lucaslealx/Titanic/blob/main/Parte3.ipynb)
+## [Etapa 3: Aprofundando no negócio e melhorando os tratamentos dos dados](https://github.com/lucaslealx/Titanic/blob/main/Parte3.ipynb)
 - Na terceira etapa o grande objetivo era **entender melhor os dados** para **fazer um melhor tratamento** e tentar melhorar o resultado obtido anteriormente.
 - Então fizemos:
   - O **ajuste na escala dos dados para as colunas Age e Fare**
@@ -23,3 +26,14 @@ Repositório criado para a **[competição do Kaggle sobre o desastre do Titanic
   - Para finalizar, analisamos a **correlação de todas as variáveis** para selecionar aquelas que mais faziam sentido para o modelo
 - Utilizamos os mesmos modelos vistos anteriormente
 - O **score público retornado pelo Kaggle foi: 0,77033**
+
+## [Etapa 4: Selecionando outros algoritmos para fazer a previsão](https://github.com/lucaslealx/Titanic/blob/main/Parte4.ipynb)
+- Nessa etapa vamos manter todas as colunas (incluindo SibSp e Parch) e utilizar novos algoritmos para verificar o resultado do modelo
+- Os algoritmos que vamos utilizar nessa etapa são a **Regressão Logística** (vamos manter pois foi o com melhores resultados nas etapas anteriores), **RandomForest e MLPCLassifier (Redes Neurais)**
+- O MLPClassifier (um algoritmo de Redes Neurais) obteve a maior acurácia nos dados de validação entre todos os modelos vistos até agora, porém ao usar esse modelo nos dados de teste (que faremos a submissão) o resultado foi pior que na etapa 3, mostrando que **provavelmente tivemos um overfitting do nosso modelo**
+- O **score público retornado pelo Kaggle foi: 0,69856**
+
+## [Etapa 5: Utilizando o GridSearchCV e determinando os melhores parâmetros](https://github.com/lucaslealx/Titanic/blob/main/Parte5.ipynb)
+- Agora utilizamos o GridSearchCV para determinar os melhores parâmetros para os 3 modelos que utilizamos na etapa anterior
+- Nesse caso, o modelo escolhido foi aquele utilizando o RandomForest e o resultado melhorou consideravalmente em relação a etapa 4 e foi melhor que na etapa 3
+- O **score público retornado pelo Kaggle foi: 0,78229**
